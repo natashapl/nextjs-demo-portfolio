@@ -5,18 +5,18 @@ This project serves as a **learning exercise** in **Next.js 13+**, **app router*
 
 ![Portfolio Preview](public/images/nextjs-folio-screenshot.webp) <!-- Add an image of your portfolio here -->
 
-## 📌 Features
-- 🚀 **Next.js App Router** – Learning **Static Site Generation (SSG)** & **Server Components**
-- 🎨 **Tailwind CSS** – Rapid UI styling
-- 📡 **Contentful CMS** – Managing portfolio projects dynamically
-- 🔍 **Client-side Filtering** – Using React state for project filtering
-- 🖼️ **Dynamic Routing** – Individual project pages using **`/project/[slug]`**
-- 🎭 **Markdown Support** – Using `marked` to render project descriptions
-- 🌐 **SEO Optimized** – Metadata, accessible structure, and performant Next.js features
+## Features
+- **Next.js App Router** – Learning **Static Site Generation (SSG)** & **Server Components**
+- **Tailwind CSS** – Rapid UI styling
+- **Contentful CMS** – Managing portfolio projects dynamically
+- **Client-side Filtering** – Using React state for project filtering
+- **Dynamic Routing** – Individual project pages using **`/project/[slug]`**
+- **Markdown Support** – Using `marked` to render project descriptions
+- **SEO Optimized** – Metadata, accessible structure, and performant Next.js features
 
 ---
 
-## 🛠 **Tech Stack**
+## **Tech Stack**
 | **Technology**  | **Purpose** |
 |---------------|------------|
 | **Next.js** | React framework with SSR, SSG, API Routes |
@@ -27,12 +27,12 @@ This project serves as a **learning exercise** in **Next.js 13+**, **app router*
 
 ---
 
-## 📸 **Demo**
-🔗 [Live Demo](https://your-demo-link.com) *(Replace with your deployment URL!)*
+## **Demo**
+🔗 [Live Demo](https://your-demo-link.com)
 
 ---
 
-## 🚀 **Getting Started**
+## **Getting Started**
 ### **1️⃣ Clone the Repository**
 ```sh
 git clone https://github.com/your-username/nextjs-portfolio-demo.git
@@ -60,7 +60,7 @@ Your site is now running at **`http://localhost:3000`** 🚀.
 
 ---
 
-## 🏗 **Project Structure**
+## **Project Structure**
 ```
 nextjs-portfolio-demo/
 │── src/app/                # Next.js App Router
@@ -82,7 +82,7 @@ nextjs-portfolio-demo/
 
 ---
 
-## 🔍 **What I Learned**
+## **What I Learned**
 ✔️ **Next.js App Router** – Using Server Components, layouts, and dynamic routes  
 ✔️ **Static Site Generation (SSG)** – Pre-rendering pages with `getStaticProps()`  
 ✔️ **Fetching Data with GraphQL** – Using Contentful as a headless CMS  
@@ -92,7 +92,7 @@ nextjs-portfolio-demo/
 
 ---
 
-## 🌎 **Deployment**
+## **Deployment**
 Deployed on **Vercel** (recommended for Next.js apps).
 
 ### **Deploy on Vercel (Free)**
@@ -102,18 +102,18 @@ Deployed on **Vercel** (recommended for Next.js apps).
 
 ---
 
-## 🤝 **Contributing**
+## **Contributing**
 This project is a learning exercise, but feel free to **open issues or suggest improvements**!
 
 ---
 
-## ⚡ **Author**
+## **Author**
 👩‍💻 **Natasha Pierre-Louis**  
 🔗 [GitHub](https://github.com/natashapl) • 🌐 [Portfolio](https://www.natashasfolio.com/)
 
 ---
 
-## ⭐ **Support**
+## **Support**
 If you like this project, **please give it a ⭐ on GitHub**! 😊
 
 ---

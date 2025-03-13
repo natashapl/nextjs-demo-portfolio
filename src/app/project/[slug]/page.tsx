@@ -5,39 +5,28 @@ import { marked } from "marked";
 import Sidebar from "../../components/Sidebar";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
-// Define a minimal type for params
-interface PageParams {
-  params: {
-    slug?: string;
-  };
-}
+// ✅ Define `params` as a Promise
+type Params = Promise<{ slug: string }>;
 
-export default async function ProjectPage({ params }: PageParams) {
-  // Explicitly await the params object itself
-  const resolvedParams = await Promise.resolve(params);
-  const slug = resolvedParams.slug || "";
-  
-  // Now fetch projects
+export default async function ProjectPage({ params }: { params: Params }) {
+  // ✅ Await `params` since Next.js 15 treats them as async
+  const { slug } = await params;
+
+  // Fetch all projects
   const allProjects = await getProjects();
-  
-  // Find the project using the now-resolved slug
-  const project = allProjects.find(p => p.slug === slug);
-  
-  // Handle case when project is not found
+
+  // Find the project by slug
+  const project = allProjects.find((p) => p.slug === slug);
+
+  // Handle case where project is not found
   if (!project) {
     console.warn(`No project found for slug: ${slug}`);
     return notFound();
   }
 
-  // Convert markdown to HTML - make sure it's a string, not a Promise
+  // Convert markdown to HTML
   const htmlContent = marked.parse(project.description);
-  
-  // Make sure htmlContent is a string
-  const safeHtmlContent = typeof htmlContent === 'string' 
-    ? htmlContent 
-    : await Promise.resolve(htmlContent);
 
-  // Render the project
   return (
     <>
       <Sidebar />
@@ -45,7 +34,6 @@ export default async function ProjectPage({ params }: PageParams) {
         <Breadcrumbs pageTitle={project.title} />
         <div className="project-detail">
           <h1 className="text-3xl font-bold">{project.title}</h1>
-
 
           {/* Gallery Images (if available) */}
           {project.gallery && project.gallery.length > 0 && (
@@ -65,11 +53,10 @@ export default async function ProjectPage({ params }: PageParams) {
             </div>
           )}
 
-          
           {/* Render the markdown as HTML */}
           <div
             className="prose prose-lg text-gray-600 mt-4"
-            dangerouslySetInnerHTML={{ __html: safeHtmlContent }} 
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </div>
       </main>
