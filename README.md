@@ -28,7 +28,7 @@ This project serves as a **learning exercise** in **Next.js 13+**, **app router*
 ---
 
 ## **Demo**
-🔗 [Live Demo](https://your-demo-link.com)
+🔗 [Live Demo](https://nextjs-demo-portfolio-natashasworld.vercel.app/)
 
 ---
 
