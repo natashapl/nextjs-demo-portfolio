@@ -23,6 +23,7 @@ export default function About() {
           <li><strong>Client-side Filtering</strong> - Users can filter portfolio projects by category.</li>
           <li><strong>Markdown Support</strong> - Content is written in <strong>Markdown</strong> and converted to HTML.</li>
           <li><strong>Next.js App Router</strong> - Learning <strong>SSG, SSR, and API routes</strong>.</li>
+          <li><strong>Unit Testing</strong> - Implemented tests using <strong>Jest</strong> and <strong>React Testing Library</strong>.</li>
         </ul>
         
         <h2 className="text-2xl font-semibold mt-6 mb-2">What I Learned</h2>
@@ -31,12 +32,14 @@ export default function About() {
           <li><strong>GraphQL Queries</strong> - Fetching data from <strong>Contentful CMS</strong>.</li>
           <li><strong>Tailwind CSS</strong> - Creating responsive and accessible UI designs.</li>
           <li><strong>Markdown to HTML Conversion</strong> - Rendering structured content dynamically.</li>
+          <li><strong>Testing Best Practices</strong> - Writing unit tests for UI components.</li>
         </ul>
         
         <h2 className="text-2xl font-semibold mt-6 mb-2">Future Improvements</h2>
         <ul className="list-disc list-inside text-gray-600">
           <li>Implementing <strong>dark mode</strong>.</li>
           <li>Improving <strong>SEO optimization</strong> (meta tags, structured data).</li>
+          <li>Expanding test coverage to more components.</li>
         </ul>
         
         <Footer />
