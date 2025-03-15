@@ -9,7 +9,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ pageTitle }: BreadcrumbsProps) {
   const pathname = usePathname();
-  const pathSegments = pathname.split("/").filter((segment) => segment);
+  const isProjectPage = pathname.startsWith("/project/");
 
   // Capitalize first letter and shorten text if it's too long
   const formatText = (text: string, maxLength = 35) => {
@@ -24,31 +24,13 @@ export default function Breadcrumbs({ pageTitle }: BreadcrumbsProps) {
           <Link href="/" className="hover:underline text-blue-600">
             Portfolio
           </Link>
-          {pathSegments.length > 0 && <span> / </span>}
         </li>
-
-        {pathSegments.map((segment, index) => {
-          const isLast = index === pathSegments.length - 1;
-          const href = "/" + pathSegments.slice(0, index + 1).join("/");
-
-          if (segment === "project") return null;
-
-          // Use the project title instead of slug, and apply truncation
-          const label = isLast && pageTitle ? formatText(pageTitle) : formatText(decodeURIComponent(segment));
-
-          return (
-            <li key={href}>
-              {isLast ? (
-                <span title={pageTitle} className="text-gray-700">{label}</span>
-              ) : (
-                <Link href={href} title={pageTitle} className="hover:underline text-blue-600">
-                  {label}
-                </Link>
-              )}
-              {!isLast && <span> / </span>}
-            </li>
-          );
-        })}
+        {isProjectPage && pageTitle && (
+          <>
+            <li>/</li>
+            <li className="text-gray-500">{formatText(pageTitle)}</li>
+          </>
+        )}
       </ul>
     </nav>
   );
