@@ -37,12 +37,12 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
           {/* Gallery Images (if available) */}
           {project.gallery && project.gallery.length > 0 && (
-            <div className="mt-10">
+            <div className="mt-10 mb-4">
               <div className="grid grid-cols-1">
                 {project.gallery.map((image, index) => (
                   <Image
                     key={index}
-                    className="rounded-md"
+                    className="rounded-md mb-4"
                     src={image.url}
                     alt={image.description || `Gallery Image ${index + 1}`}
                     width={image.width || 350}
@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
           {/* Render the markdown as HTML */}
           <div
-            className="prose prose-lg text-gray-600 mt-4"
+            className="prose prose-lg mt-4"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
         </div>
